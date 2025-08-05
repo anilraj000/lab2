@@ -4,20 +4,19 @@ public class Main {
         SavingsAccount sa = new SavingsAccount(raj, 2000);
 
         sa.deposit(1000);
-        sa.withdraw(2300);  // Should not succeed if it violates minimum balance
+        sa.withdraw(2300);  
         System.out.println("SavingsAccount: " + sa);
 
         Person ram = new Person("Ram", 26);
         CurrentAccount ca = new CurrentAccount(ram, 1000);
 
         ca.deposit(500);
-        boolean success = ca.withdraw(1800); // Should succeed if within overdraft
+        boolean success = ca.withdraw(1800); 
         System.out.println("Withdraw from current account successful? " + success);
         System.out.println("CurrentAccount: " + ca);
     }
 }
 
-// Person class
 class Person {
     private String name;
     private float age;
@@ -37,7 +36,6 @@ class Person {
     }
 }
 
-// Account class
 class Account {
     private static long nextAccNum = 1000001;
     protected long accNum;
