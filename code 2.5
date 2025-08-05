@@ -21,7 +21,7 @@ class Person {
 abstract class Account {
     private static long nextAccNum = 1000001;
     private long accNum;
-    protected double balance; // protected for subclass
+    protected double balance; 
     private Person accHolder;
 
     public Account(Person accHolder, double initialBalance) {
